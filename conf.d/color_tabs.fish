@@ -19,3 +19,5 @@ function chpwd --on-variable PWD
     reset_tab_color
   end
 end
+
+chpwd
