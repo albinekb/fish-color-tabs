@@ -1,0 +1,2 @@
+# fish-color-tabs
+
