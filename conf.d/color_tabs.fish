@@ -8,16 +8,18 @@ function reset_tab_color -d "Reset tab color"
     echo -ne "\033]6;1;bg;*;default\a"
 end
 
-function chpwd --on-variable PWD
+function color_tabs --on-variable PWD
   if string match '*/frontend-*' $PWD >> /dev/null
     tab_color 104 159 56
   else if string match '*/service-*' $PWD >> /dev/null
     tab_color 249 168 37
   else if string match '*/app-*' $PWD >> /dev/null
     tab_color 104 159 56
+  else if string match '*/kap*' $PWD >> /dev/null
+    tab_color 45 28 100
   else
     reset_tab_color
   end
 end
 
-chpwd
+color_tabs
