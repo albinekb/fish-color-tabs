@@ -9,7 +9,9 @@ function reset_tab_color -d "Reset tab color"
 end
 
 function color_tabs --on-variable PWD
-  if string match '*/frontend-*' $PWD >> /dev/null
+  if string match '*/pwa-*' $PWD >> /dev/null
+    tab_color 104 250 56
+  else if string match '*/frontend-*' $PWD >> /dev/null
     tab_color 104 159 56
   else if string match '*/service-*' $PWD >> /dev/null
     tab_color 249 168 37
